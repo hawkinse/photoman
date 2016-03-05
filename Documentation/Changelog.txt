@@ -22,15 +22,15 @@ editor. Please follow the following formatting conventions:
                       | MPB.cs           | Added ability to enter text|
                                          | directly into selection box|
 -----------------------------------------------------------------------
-	                  | Entire Project   | Removed unused includes.   |
-					                     | Cleaned up unused exception|
-										 | warnings.                  |
-					                     | Other general cleanup.     |
-					                     | Prepare project for upload |
+                      | Entire Project   | Removed unused includes.   |
+                                         | Cleaned up unused exception|
+                                         | warnings.                  |
+                                         | Other general cleanup.     |
+                                         | Prepare project for upload |
                                          | to BitBucket git repo. This|
                                          | changelog will be kept for |
-										 | historical purposes, but   |
-										 | will not be updated further|
+                                         | historical purposes, but   |
+                                         | will not be updated further|
 -----------------------------------------------------------------------
 
 -----------------------------------------------------------------------
