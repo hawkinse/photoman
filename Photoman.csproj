@@ -1,0 +1,198 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>9.0.30729</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{E998A065-76AA-4B11-99C6-5C8C5D69A4E5}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Photoman</RootNamespace>
+    <AssemblyName>Photoman</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <SourceAnalysisOverrideSettingsFile>C:\Users\Elliot Hawkins\AppData\Roaming\ICSharpCode/SharpDevelop3.0\Settings.SourceAnalysis</SourceAnalysisOverrideSettingsFile>
+    <NoStdLib>False</NoStdLib>
+    <TreatWarningsAsErrors>false</TreatWarningsAsErrors>
+    <StartupObject>
+    </StartupObject>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <UpgradeBackupLocation>
+    </UpgradeBackupLocation>
+    <OldToolsVersion>3.5</OldToolsVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>Full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)' == 'Debug' ">
+    <CheckForOverflowUnderflow>False</CheckForOverflowUnderflow>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Platform)' == 'AnyCPU' ">
+    <RegisterForComInterop>False</RegisterForComInterop>
+    <GenerateSerializationAssemblies>Auto</GenerateSerializationAssemblies>
+    <BaseAddress>4194304</BaseAddress>
+    <PlatformTarget>x86</PlatformTarget>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Management" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml.Linq">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data.DataSetExtensions">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Constants.cs" />
+    <Compile Include="Controller\Controller Helpers\AutoHandler.cs" />
+    <Compile Include="Controller\Controller.cs" />
+    <Compile Include="Controller\Controller Helpers\HistoryHandler.cs" />
+    <Compile Include="Controller\Controller Helpers\HistoryObject.cs" />
+    <Compile Include="Controller\Controller Helpers\ImageHandler.cs" />
+    <Compile Include="Core\BasicOps.cs" />
+    <Compile Include="Core\HLS.cs" />
+    <Compile Include="Core\OtherOps.cs" />
+    <Compile Include="Core\RGB.cs" />
+    <Compile Include="Core\UnsafeBitmap.cs" />
+    <Compile Include="Debug\DebugConsole.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Debug\DebugConsole.designer.cs">
+      <DependentUpon>DebugConsole.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Global.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="UserInterface\MainGUI.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UserInterface\MainGUI.Designer.cs">
+      <DependentUpon>MainGUI.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserInterface\MainGUI_Controller.cs" />
+    <Compile Include="UserInterface\TestGUI.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UserInterface\TestGUI.Designer.cs">
+      <DependentUpon>TestGUI.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserInterface\TestGUI_Controller.cs" />
+    <Compile Include="UserInterface\UIData\udImage_DragDrop.cs" />
+    <Compile Include="UserInterface\UIWidgets\DoubleBufferedControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserInterface\UIWidgets\DoubleBufferedControl.designer.cs">
+      <DependentUpon>DoubleBufferedControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserInterface\UIWidgets\uiChromakey.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserInterface\UIWidgets\uiChromakey.designer.cs">
+      <DependentUpon>uiChromakey.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserInterface\UIWidgets\uiImageTrackbar.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserInterface\UIWidgets\uiImageTrackbar.Designer.cs">
+      <DependentUpon>uiImageTrackbar.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserInterface\UIWidgets\uiMousePictureBox.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserInterface\UIWidgets\uiMousePictureBox.designer.cs">
+      <DependentUpon>uiMousePictureBox.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserInterface\UIWidgets\uiPreviewPopup.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserInterface\UIWidgets\uiPreviewPopup.Designer.cs">
+      <DependentUpon>uiPreviewPopup.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserInterface\UIWidgets\uiThumbnailList.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserInterface\UIWidgets\uiThumbnailList.Designer.cs">
+      <DependentUpon>uiThumbnailList.cs</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Documentation\Changelog.txt" />
+    <Content Include="GraphicResources\350x350-Mona.jpg" />
+    <Content Include="GraphicResources\50x50-Mona.jpg" />
+    <None Include="GraphicResources\Dither2.jpg" />
+    <None Include="GraphicResources\Grayscale2.jpg" />
+    <None Include="GraphicResources\Invert2.jpg" />
+    <None Include="GraphicResources\Sepia2.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Debug\DebugConsole.resx">
+      <DependentUpon>DebugConsole.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserInterface\MainGUI.resx">
+      <DependentUpon>MainGUI.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserInterface\TestGUI.resx">
+      <DependentUpon>TestGUI.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserInterface\UIWidgets\DoubleBufferedControl.resx">
+      <DependentUpon>DoubleBufferedControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserInterface\UIWidgets\uiChromakey.resx">
+      <DependentUpon>uiChromakey.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserInterface\UIWidgets\uiImageTrackbar.resx">
+      <DependentUpon>uiImageTrackbar.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserInterface\UIWidgets\uiMousePictureBox.resx">
+      <DependentUpon>uiMousePictureBox.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserInterface\UIWidgets\uiPreviewPopup.resx">
+      <DependentUpon>uiPreviewPopup.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserInterface\UIWidgets\uiThumbnailList.resx">
+      <DependentUpon>uiThumbnailList.cs</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

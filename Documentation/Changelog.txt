@@ -1,0 +1,562 @@
+﻿=======================================================================
+|                              Changelog                              |
+=======================================================================
+
+This changlog was formated to be easily readable in a plain text 
+editor. Please follow the following formatting conventions:
+
+-Do not excede the lines along the edges (72 characters)
+-Format your text to be boxed in like other entries
+-DO NOT use a tab key. To position text hold down the space bar.
+-Date and Person only need to be entered once unless they change
+-Each day should have its own "box"
+
+-----------------------------------------------------------------------
+|   Date     | Person | Affected files    |          Changes          |
+-----------------------------------------------------------------------
+
+-----------------------------------------------------------------------
+|2016/03/05  | Elliot | GraphicResources | Changed preview images to  |
+                                         | public domain Mona Lisa.   |                      
+-----------------------------------------------------------------------
+                      | MPB.cs           | Added ability to enter text|
+                                         | directly into selection box|
+-----------------------------------------------------------------------
+	                  | Entire Project   | Removed unused includes.   |
+					                     | Cleaned up unused exception|
+										 | warnings.                  |
+					                     | Other general cleanup.     |
+					                     | Prepare project for upload |
+                                         | to BitBucket git repo. This|
+                                         | changelog will be kept for |
+										 | historical purposes, but   |
+										 | will not be updated further|
+-----------------------------------------------------------------------
+
+-----------------------------------------------------------------------
+|2011/02/07  | Elliot | MainGUI.cs       | Added exception count to   |
+                                         | status bar.                |
+                                         | Removed debugger           |
+                                         | requirement for version no.|
+                                         | to show in title bar.      |
+-----------------------------------------------------------------------
+                      | DebugOutput.cs   | Added time stamps to debug |
+                                         | output.                    |
+                                         | Removed excess lines in    |
+                                         | debug output.              |                      
+-----------------------------------------------------------------------
+                      | MPB.cs           | Added ability to enter text|
+                                         | directly into selection box|
+-----------------------------------------------------------------------
+
+
+-----------------------------------------------------------------------
+|2011/02/07  | Elliot | ImageHandler.cs  | Image cache now cleared on |
+                                         | deconstruction.            |
+-----------------------------------------------------------------------
+                      | HistoryHandler.cs| History cache now cleared  |
+                                         | on deconstruction.         |
+-----------------------------------------------------------------------
+                      | MPB.cs           | Lowered ant march timer to |
+                                         | 5 FPS to reduce stress on  |
+                                         | CPU.                       |
+                                         | Added ability to enable or |
+                                         | disable ant marching       |
+                                         | independent of battery     |
+-----------------------------------------------------------------------
+
+-----------------------------------------------------------------------
+|2011/02/03  | Elliot | MainGUI.cs        | Stop ant march timer in   |
+                                          | mpb on window movement and|
+                                          | resize.                   |
+-----------------------------------------------------------------------
+                      | uiMPB.cs          | Added ability to turn on  |
+                                          | or off ant marching from  |
+                                          | other classes.            |                                          
+-----------------------------------------------------------------------
+
+-----------------------------------------------------------------------
+|2011/02/03  | Elliot | uiThumbnailLst.cs | Moved all my self drawn   |
+                                          | controls to double        |
+                                          | buffered controls to stop |
+                                          | Flickering on scrolling.  |
+                                          | Tweeked scrolling code to |
+                                          | scroll at a more sane pace|
+                                          | Fixed bug where sometimes |
+                                          | you couldnt scroll to the |
+                                          | last image without the    |
+                                          | mouse scroll wheel.       |
+-----------------------------------------------------------------------
+                      | MainGUI.cs        | Wired up image count and  |
+                                          | undo/redo count labels    |
+-----------------------------------------------------------------------
+                      | Controller.cs     | Added ability to get      |
+                                          | Undo/Redo count from      |
+                                          | back end, as well as pass |
+                                          | loaded image count to the |
+                                          | GUI.                      |                                          
+-----------------------------------------------------------------------
+                                           
+-----------------------------------------------------------------------
+                      | Controller.cs     | Added an option to force  |
+                                          | Cache checking.           |
+-----------------------------------------------------------------------
+                      | ImageHandler.cs   | Modified caching to       |
+                                          | run before loading images |
+                                          | instead of after and      |
+                                          | account for the image's   |
+                                          | file size before          |
+                                          | attempting to load images.|
+                                          | Added ability to rerun    |
+                                          | cache determination code  |
+                                          | when out of ram.          |
+-----------------------------------------------------------------------
+                      | MainGUI.cs        | Added status label that   |
+                                          | shows cache status.       |
+-----------------------------------------------------------------------
+
+
+-----------------------------------------------------------------------
+|2011/02/02  | Elliot | Global.cs         | Improved efficiency of    |
+                                          | GetTotalMemory by making  |
+                                          | it only calculate value   |
+                                          | once and storing it.      |
+-----------------------------------------------------------------------
+                      | Controller.cs     | Added an option to force  |
+                                          | Cache checking.           |
+-----------------------------------------------------------------------
+                      | ImageHandler.cs   | Modified caching to       |
+                                          | run before loading images |
+                                          | instead of after and      |
+                                          | account for the image's   |
+                                          | file size before          |
+                                          | attempting to load images.|
+                                          | Added ability to rerun    |
+                                          | cache determination code  |
+                                          | when out of ram.          |
+-----------------------------------------------------------------------
+                      | MainGUI.cs        | Added status label that   |
+                                          | shows cache status.       |
+-----------------------------------------------------------------------
+
+-----------------------------------------------------------------------
+|2011/01/28  | Elliot | Global.cs         | Added a method to detect  |                                          
+                                          | if we're on battery power,|
+                                          | and a setting to disable  |
+                                          | the ant march animation   |
+                                          | if on the battery.        |
+-----------------------------------------------------------------------
+                      | uiMPB.cs          | Added a check for if we   |
+                                          | to disable ant marching   |
+                                          | and do so if needed.      |
+-----------------------------------------------------------------------
+                      | HistoryHandler.cs | Added a reset method for  |
+                                          | speedup in loading images.|
+-----------------------------------------------------------------------
+                      | Global.cs         | Added a bool to disable   |
+                                          | painting in heavy         |
+                                          | components.               |
+-----------------------------------------------------------------------
+
+-----------------------------------------------------------------------
+|2011/01/28  | Elliot | BasicOps.cs       | Fixed bug in maintain     |
+                                          | aspect ratio that caused  |
+                                          | images to be resized in   |
+                                          | sizes larger than max.    |                                          
+-----------------------------------------------------------------------
+
+-----------------------------------------------------------------------
+|2011/01/17  | Elliot | MainGUI.cs        | Various bug fixes. See    |
+                                          | known issues list for     |
+                                          | details.                  |
+-----------------------------------------------------------------------
+
+-----------------------------------------------------------------------
+|2011/01/14  | Elliot | MainGUI.cs        | Implimented Add Text, list|
+                                          | switching to GUI.         |
+-----------------------------------------------------------------------
+
+-----------------------------------------------------------------------
+|2011/01/13  | Elliot | Changelog.txt     | Moved to Documentation    |
+                                          | folder.                   |
+-----------------------------------------------------------------------
+                      | MainGUI.cs        | Added MainGUI to project. |
+                                          | Created UI in designer.   |
+                                          | Wired up most of back end.|
+-----------------------------------------------------------------------
+                      | TestGUI.cs        | Added toggle on startup   |
+                                          | to choose between test and|
+                                          | final GUIs.               |
+-----------------------------------------------------------------------
+                      | uiMPB.cs          | Added class and helper    |
+                                          | classes from test project.|
+-----------------------------------------------------------------------
+                      | Program.cs        | No longer a console app.  |
+                                          | Switched console over to  |
+                                          | the custom console from   |
+                                          | MPB Test Project.         |                                                                                                                         
+-----------------------------------------------------------------------
+
+-----------------------------------------------------------------------
+|2010/12/06  | Elliot | uiThumbnailList.cs| Fixed scrolling bug. Added|
+                                          | mouse wheel scrolling.    |
+                                          | Fixed clicking so that    |
+                                          | dragging non-index element|
+                                          | does not change the index |
+                                          | to that element.          |
+-----------------------------------------------------------------------
+                      | uiChromakey.cs    | Modified drag and drop to |
+                                          | fire an event on drag over|
+                                          | Removed apply button. Now |
+                                          | applies when droping data |
+                                          | or clicking dropped image.|
+-----------------------------------------------------------------------
+                      | uiPreviewPopup.cs | Added bool to allow it to |
+                                          | run as both popup and as a|
+                                          | static widget.            |
+                                          | Added chromakey support.  |
+-----------------------------------------------------------------------
+                      | uiImageTrackbar.cs| Added events for scrollbar|
+                                          | scrolling and dragging    |
+-----------------------------------------------------------------------
+                      | TestGUI.cs        | Made preview popup static |
+                                          | Added preview support for |
+                                          | chromakey and sliders.    |
+                                          | Added an intercept in     |
+                                          | chromakey to fix blurry   |
+                                          | background issue by       |
+                                          | replacing low res data w/ |
+                                          | high res data from backend|     
+                                          | Can now load in multiple  |
+                                          | files at once through ofd |                                                                                                                         
+-----------------------------------------------------------------------
+                      | HistoryHandler.cs | Fixed issue where clearing|
+                                          | history cache on init was |
+                                          | basing check on image     |
+                                          | cache directory.          |
+-----------------------------------------------------------------------
+
+-----------------------------------------------------------------------
+|2010/12/03  | Elliot | uiThumbnailList.cs| Fixed and completed drag  |
+                                          | and drop implimentation   |                                                                
+-----------------------------------------------------------------------
+                      | TestGUI.cs        | Update to support         |
+                                          | chromakey widget and op.  |
+-----------------------------------------------------------------------
+                      | OtherOps.cs       | Fixed bug where chromakey |
+                                          | function was private.     |
+-----------------------------------------------------------------------
+                      | ImageHandler.cs   | Added a function to get an|
+                                          | image at a specified index|
+-----------------------------------------------------------------------
+                      | Controller.cs     | Added function to get an  |
+                                          | image at a specified index|
+                                          | Updated to support        |
+                                          | chromakey.                |
+-----------------------------------------------------------------------
+
+
+-----------------------------------------------------------------------
+|2010/11/22  | Elliot | uiThumbnailList.cs| Failed attempts to fix    |
+                                          | scrolling bugs.           |
+                                          | Began implimenting drag & |
+                                          | drop.                     |                                                                
+-----------------------------------------------------------------------
+                      | udImageData.cs    | Added class that will be  |
+                                          | passed arround through    |
+                                          | drag and drop.            |
+
+-----------------------------------------------------------------------
+|2010/11/19  | Elliot | uiThumbnailList.cs| Brought in updated control|
+                                          | from test project. Fixed  |
+                                          | a few index related bugs  |
+                                          | while integrating into    |
+                                          | test GUI. Added keyboard  |
+                                          | index switching           |
+                      | TestGUI.cs        | Improved integration of   |
+                                          | thumbnail list in GUI. Now|
+                                          | tied directly into loaded |
+                                          | images. Remove may still  |
+                                          | have issues, not sure.    |                                                                
+-----------------------------------------------------------------------
+
+-----------------------------------------------------------------------
+|2010/11/17  | Elliot | uiThumbnailList.cs| Implimented thumnbnails,  |
+                                          | text, alternating shades, |
+                                          | selected panel highlight. |
+                                          | Added a non-working       |
+                                          | keyboard index switcher.  |
+                                          | Fixed a bug that messed up|
+                                          | panel placement.          |
+-----------------------------------------------------------------------
+
+-----------------------------------------------------------------------
+|2010/11/16  | Elliot | uiThumbnailList.cs| Started writing. Got base |
+                                          | structure implimented     |
+-----------------------------------------------------------------------
+                      | TestGUI.cs        | Fixed an issue where an   |
+                                          | exception would get thrown|
+                                          | while generating previews |
+                                          | with invalid params when  |
+                                          | debugger wasnt attached.  |
+-----------------------------------------------------------------------
+
+-----------------------------------------------------------------------
+|2010/11/15  | Elliot | uiImageTrackbar.cs| Fixed issue with hue      |
+                                          | slider brightness.        |
+-----------------------------------------------------------------------
+                      | TestGUI.cs        | Fixed an issue where an   |
+                                          | exception would get thrown|
+                                          | while generating previews |
+                                          | with invalid params when  |
+                                          | debugger wasnt attached.  |
+-----------------------------------------------------------------------
+
+-----------------------------------------------------------------------
+|2010/11/12  | Elliot | uiImageTrackbar.cs| Added saturation and lum  |
+                                          | bar generation. Fixed     |
+                                          | rendering bugs and wired  |
+                                          | up sliders to test.       |
+-----------------------------------------------------------------------
+
+-----------------------------------------------------------------------
+|2010/11/11  | Elliot | uiImageTrackbar.cs| Fixed a few bugs which    |
+                                          | stoped rendering. Wrote   |
+                                          | bar generation for all    |
+                                          | modes except Saturaiton + |
+                                          | Luminosity. Added a ReInit|
+                                          | method to allow ease of   |
+                                          | use in studio designer.   |
+-----------------------------------------------------------------------
+
+-----------------------------------------------------------------------
+|2010/11/05  | Elliot | uiImageTrackbar.cs| Began creating UI Widget  |
+                                          | intended for use with RGB |
+                                          | and HLS functionality.    |
+-----------------------------------------------------------------------
+
+-----------------------------------------------------------------------
+|2010/11/03  | Elliot | Controller Folder | Moved all but Controller  |
+                                          | into Controller Helpers   |
+-----------------------------------------------------------------------
+                      | BasicOps.cs       | Fixed bug in Maintain     |
+                                          | aspect ratio where images |
+                                          | were scaled along the     |
+                                          | wrong axis.               |
+-----------------------------------------------------------------------
+                      | OtherOps.cs       | Added ChromaKey function  |
+                                          | from 11/02 test project.  |
+-----------------------------------------------------------------------
+                      | uiPreviewPopup.cs | Added uiPreviewPopup for  |
+                                          | showing previews of ops   |
+                                          | before starting them.     |
+-----------------------------------------------------------------------
+                      | TestGUI.cs        | Updated GUI to support    |
+                                          | preview popup.            | 
+-----------------------------------------------------------------------
+
+
+-----------------------------------------------------------------------
+|2010/10/01  | Elliot | AutoHandler.cs    | Fixed several bugs.       |
+-----------------------------------------------------------------------
+                      | TestGUI.cs        | Finished updating to      |
+                                          | support autohandler.      |
+-----------------------------------------------------------------------
+
+-----------------------------------------------------------------------
+|2010/09/30  | Elliot | AutoHandler.cs    | Wrote autohandler.        |
+-----------------------------------------------------------------------
+                      | Controller.cs     | Updated for autohandler   |
+                                          | support.                  |
+-----------------------------------------------------------------------
+                      | TestGUI.cs        | Started updating to       |
+                                          | support autohandler.      |
+-----------------------------------------------------------------------
+
+-----------------------------------------------------------------------
+|2010/09/29  | Elliot | HistoryHandler.cs | Fixed bug related to      |
+                                          | removing history when not |
+                                          | on latest object.         |
+                                          | Fixed several bugs related|
+                                          | to history object caching.|
+                                          | Fixed history cache path  |
+                                          | so it saves in the        |
+                                          | TempHistory folder instead|
+                                          | of the app directory.     |
+-----------------------------------------------------------------------
+                      | Global.cs         | Updated error logging to  |
+                                          | put a "-" char before all |
+                                          | logs so that multiline    |
+                                          | logs are easier to read.  |
+                                          | Updated error logging to  |
+                                          | add an extra line after   |
+                                          | all entries for improved  |
+                                          | readability.              |
+-----------------------------------------------------------------------
+
+-----------------------------------------------------------------------
+|2010/09/28  | Elliot | HistoryHandler.cs | Rewrote HistoryHandler.cs |
+                                          | Almost finished, still has|
+                                          | a bug in the code to      |
+                                          | remove all instances after|
+                                          | the current when adding   |
+                                          | new images causing an     |
+                                          | inability to move back to |
+                                          | the first history.        |
+-----------------------------------------------------------------------
+
+-----------------------------------------------------------------------
+|2010/09/27  | Elliot | HistoryObject.cs  | Created object to assist  |
+                                          | with image history.       |
+-----------------------------------------------------------------------
+                      | HistoryHandler.cs | Started planning out      |
+                                          | rewrite that uses         |
+                                          | HistoryObject.cs.         |
+-----------------------------------------------------------------------
+
+-----------------------------------------------------------------------
+|2010/09/23  | Elliot | HistoryHandler.cs | Finished up historyhandler|
+                                          | Still have a bug with     |
+                                          | keeping tack of current   |
+                                          | image.                    |
+-----------------------------------------------------------------------
+                      | Controller.cs     | Updated for Historyhandler|
+-----------------------------------------------------------------------
+                      | TestGUI.cs        | Updated for Historyhandler|
+-----------------------------------------------------------------------
+                      | Changelog.txt     | Changed collumn width to  |
+                                          | 72 for HistoryHandler.cs  |
+-----------------------------------------------------------------------
+
+---------------------------------------------------------------------
+|2010/09/20  | Elliot | ImageHandler.cs | Fixed a few bugs related  |
+                                        | to image index going out  |
+                                        | of bounds.                |
+                                        | Changed the ID / Bitmap   |
+                                        | dictionary to an ordered  |
+                                        | dictionary.               |
+                                        | Fixed some major bugs in  |
+                                        | the CacheImage() method   |
+                                        | where image IDs were being|
+                                        | treated as indexes.       |
+                                        | Fixed issue with loading  |
+                                        | from disk(both load and   |
+                                        | cache) where image would  |
+                                        | lock and be unable to save|
+---------------------------------------------------------------------
+
+----------------------------------------------------------------------
+|2010/09/17  | Elliot | ImageHandler.cs | Fixed major bugs with cache|
+                                        | but still have a few left, |
+                                        | namely an issue where we   |
+                                        | cant load images from cache|
+                                        | because they're in use by  |
+                                        | "another process"(us)      |
+---------------------------------------------------------------------
+                      | Controller.cs   | Updated to use ImageHandler|
+----------------------------------------------------------------------
+                      | TestGUI.cs      | Updated to match Controller|
+                                        | and new ImageHandler       |
+                                        | features                   |
+----------------------------------------------------------------------
+
+---------------------------------------------------------------------
+|2010/09/16  | Elliot | Global.cs       | Fixed methods that retrive|
+                                        | ram statistics for caching|
+---------------------------------------------------------------------
+                      | ImageHandler.cs | Implemented cahce AI that |
+                                        | will automagically cache  |
+                                        | whenever memory is low    |
+                                        | during image switches and |
+                                        | adds.                     |
+---------------------------------------------------------------------
+
+---------------------------------------------------------------------
+|2010/09/15  | Elliot | Global.cs       | Added loging system and   |
+                                        | updated rest of app to    |
+                                        | use it.                   |
+---------------------------------------------------------------------
+                      | ImageHandler.cs | Implimented caching system|
+                                        | based on old version but  |
+                                        | implimented in a much     |
+                                        | simpler and hopefully more|
+                                        | solid way. Still need to  |
+                                        | finalize way app checks   |
+                                        | ram and determines whether|
+                                        | or not to use it.         |
+---------------------------------------------------------------------
+                      | Changelog.txt   | Changed collumn width to  |
+                                        | 70 chars to fit larger    |
+                                        | filenames like            |
+                                        | ImageHandler.cs more      |
+                                        | cleanly.                  |
+---------------------------------------------------------------------
+
+---------------------------------------------------------------------
+|2010/09/14  | Elliot | Global.cs       | Played around with various|
+                                        | ways of getting system ram|
+                                        | for use with cache, will  |
+                                        | finalize methodologies in |
+                                        | next commit               |
+---------------------------------------------------------------------
+
+---------------------------------------------------------------------
+|2010/09/13  | Elliot | ImageHandler.cs | Added loading, saving,    |
+                                        | switching and other core  |
+                                        | functionalities           |
+---------------------------------------------------------------------
+
+---------------------------------------------------------------------
+|2010/09/08  | Elliot | TestGUI.cs      |  Finished test GUI.       |
+                                        | Verified that operations  |
+                                        | run properly              |
+---------------------------------------------------------------------
+
+---------------------------------------------------------------------
+|2010/09/07  | Elliot | OtherOps.cs     | Added add text and remove |
+                                        | red eye operations        |
+---------------------------------------------------------------------
+                      | Controller.cs   | Temporary controller for  |
+                                        | test GUI added. Will      |
+                                        | need to be replaced or    |
+                                        | fixed up down the road as |
+                                        | it was quickly thrown     |
+                                        | together soley for testing|
+                                        | and structure demoing     |
+                                        | purposes                  |
+---------------------------------------------------------------------
+                      | TestGUI.cs      |  Temporary GUI for Core   |
+                                        | testing added             |
+---------------------------------------------------------------------
+
+---------------------------------------------------------------------
+| 2010/09/06 | Elliot | Entire Project  | Created solution. Added   |
+                                        | UnsafeBitmap from old code|
+                                        | Added Global.cs for global|
+                                        | vars and functions        |
+                                        | Added Constants.cs for all|
+                                        | constant variables such as|
+                                        | strings and version       |
+                                        | numbers                   |
+---------------------------------------------------------------------
+                      | Global.cs       | Added vars for progress   |
+                                        | tracking                  |
+                                        | Brought over transparency |
+                                        | check methods from old    |
+                                        | code.                     |
+---------------------------------------------------------------------
+                      | RGB.cs          | Implimented RGB functions |
+                                        | Loosely based on RGBColor |
+                                        | from old photoman code    |
+                                        | Added brightness by       |
+                                        | shortcutting to gamma     |
+--------------------------------------------------------------------- 
+                      | HLS.cs          | Implimented HLS functions |
+                                        | Loosly based on HLSColor  |
+                                        | from old photoman code    |
+---------------------------------------------------------------------
+                      | BasicOps.cs     | Added Rotate, Flip, Crop  |
+                                        | and resize functionalities|
+---------------------------------------------------------------------
+									   									  
+					  
