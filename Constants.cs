@@ -58,6 +58,13 @@ namespace Photoman
         //Credits
         public const string strCredits = "Photoman Copyright (C) 2016 Elliot Hawkins\n";
 
+        //Lience
+        public const string strLicense = "Photoman is released under an MIT license, except where not applicable\n" +
+                                         "due to existing licenses from code referenced.\n\n" +
+                                         "These include the Code Project Open License 1.02 license for the marching\n" +
+                                         "ant effect on mouse selections, and the Visual C# Kicks license for the\n" +
+                                         "UnsafeBitmap.cs class.\n\n";
+
         //Tooltips
         #region Settings Tooltips
         public const string strDitheringMethod = "The style of Dithering to use.";

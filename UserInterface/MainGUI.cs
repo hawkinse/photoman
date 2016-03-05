@@ -464,5 +464,11 @@ namespace Photoman.UserInterface
             mpbMain.AllowAntMarching = cbxEnableVisualEffects.Checked;
             mpbMain.Refresh();
         }
+
+        private void aboutToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            AboutBox newAB = new AboutBox();
+            newAB.Show();
+        }
     }
 }
